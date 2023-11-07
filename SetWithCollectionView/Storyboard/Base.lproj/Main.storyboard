@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q4I-v8-MNY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Z7P-KA-W5b">
+            <objects>
+                <viewController id="Q4I-v8-MNY" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cod-x4-2Bq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="PHz-KG-S5j">
+                                <rect key="frame" x="20" y="718" width="353" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 123" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ush-4Q-mM3">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="w99-Bi-ZR7">
+                                        <rect key="frame" x="226.66666666666666" y="0.0" width="126.33333333333334" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Deal ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="DealThreeCards:" destination="Q4I-v8-MNY" eventType="touchUpInside" id="REJ-gx-55G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="riH-cq-wfC"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-GC-FLi">
+                                <rect key="frame" x="71.666666666666686" y="778" width="250" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="WFb-y9-exZ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="YoL-Wt-5qk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nPK-Q5-imF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="Q4I-v8-MNY" eventType="touchUpInside" id="1bO-LK-vzQ"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eRT-EC-x5P">
+                                <rect key="frame" x="20" y="79" width="353" height="629"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UGW-7L-2Gh">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" id="7Zp-KW-KBf">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gu8-eu-Qw0">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Q4I-v8-MNY" id="5Ri-CN-msE"/>
+                                    <outlet property="delegate" destination="Q4I-v8-MNY" id="Pcb-Zl-NKk"/>
+                                    <outletCollection property="gestureRecognizers" destination="1UW-mE-eIn" appends="YES" id="xw0-gX-ndk"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Baf-HX-Ile"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PHz-KG-S5j" firstAttribute="leading" secondItem="Baf-HX-Ile" secondAttribute="leading" constant="20" id="0yF-hx-hbX"/>
+                            <constraint firstItem="Bfb-GC-FLi" firstAttribute="top" secondItem="PHz-KG-S5j" secondAttribute="bottom" constant="10" id="A9w-NH-mZf"/>
+                            <constraint firstItem="Bfb-GC-FLi" firstAttribute="centerX" secondItem="Cod-x4-2Bq" secondAttribute="centerX" id="Jsx-4l-MjM"/>
+                            <constraint firstItem="PHz-KG-S5j" firstAttribute="top" secondItem="eRT-EC-x5P" secondAttribute="bottom" constant="10" id="UDw-at-Toz"/>
+                            <constraint firstItem="Bfb-GC-FLi" firstAttribute="bottom" secondItem="Baf-HX-Ile" secondAttribute="bottom" constant="10" id="c0a-uU-VIi"/>
+                            <constraint firstItem="Baf-HX-Ile" firstAttribute="trailing" secondItem="PHz-KG-S5j" secondAttribute="trailing" constant="20" id="eHG-Wq-z7q"/>
+                            <constraint firstItem="Baf-HX-Ile" firstAttribute="trailing" secondItem="eRT-EC-x5P" secondAttribute="trailing" constant="20" id="fW9-Bb-Wbo"/>
+                            <constraint firstItem="PHz-KG-S5j" firstAttribute="centerX" secondItem="Baf-HX-Ile" secondAttribute="centerX" id="oAM-7h-np9"/>
+                            <constraint firstItem="eRT-EC-x5P" firstAttribute="leading" secondItem="Baf-HX-Ile" secondAttribute="leading" constant="20" id="oZL-FE-Ypp"/>
+                            <constraint firstItem="eRT-EC-x5P" firstAttribute="top" secondItem="Baf-HX-Ile" secondAttribute="top" constant="20" id="zqI-IR-qhv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="eRT-EC-x5P" id="IXl-KA-LOi"/>
+                        <outlet property="dealButton" destination="w99-Bi-ZR7" id="7xP-z9-gFt"/>
+                        <outlet property="score" destination="Ush-4Q-mM3" id="4qW-ih-XTo"/>
+                        <outlet property="startGameButton" destination="Bfb-GC-FLi" id="BZ2-ko-62c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0OG-C0-hiG" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="1UW-mE-eIn">
+                    <connections>
+                        <action selector="rotationGestureToShuffle:" destination="Q4I-v8-MNY" id="uOw-Yt-xWT"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
